@@ -1,0 +1,5 @@
+REM slap open the opentablet daemon
+GUI t
+DELAY 3000
+STRING otd
+ENTER
