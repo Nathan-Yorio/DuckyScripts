@@ -1,0 +1,16 @@
+GUI t
+DELAY 3000
+STRING cd /home/yorionathan/temp
+DELAY 3000
+ENTER
+STRING echo -e '#!/bin/sh\n\nsudo sysctl -w net.ipv6.conf.all.disable_ipv6=0\nsudo sysctl -w net.ipv6.conf.default.disable_ipv6=0\nsudo sysctl -w net.ipv6.conf.lo.disable_ipv6=0\n\nsleep 10\n\ncurl ipinfo.io' > enable_ipv6.sh && chmod +x enable_ipv6.sh
+DELAY 5000
+ENTER
+STRING ./enable_ipv6.sh
+ENTER
+DELAY 20000
+STRING rm enable_ipv6.sh
+DELAY 3000
+ENTER
+STRING exit
+ENTER
